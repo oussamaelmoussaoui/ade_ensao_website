@@ -26,7 +26,7 @@ export default function Page() {
     <Layout title="Contact">
       <section className="relative w-full h-64 md:h-[400px] overflow-hidden flex items-center justify-center text-white">
         <div className="absolute inset-0 bg-cover bg-center opacity-80" style={{ backgroundImage: 'url(/2.jpg)' }} />
-        <div className="absolute inset-0 bg-gradient-to-r from-dsccGreen/70 to-dsccOrange/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-adeBlue/70 to-adeRed/70" />
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Contact</h1>
           <p className="max-w-2xl mx-auto text-lg md:text-xl">Nous sommes à votre écoute.</p>
@@ -59,7 +59,7 @@ export default function Page() {
               value={msg}
               onChange={(e) => setMsg(e.target.value)}
             />
-            <button type="submit" className="bg-dsccOrange text-white px-4 py-2 rounded inline-flex items-center gap-2">
+            <button type="submit" className="bg-adeRed text-white px-4 py-2 rounded inline-flex items-center gap-2">
               <span>Envoyer</span>
               <FaPaperPlane />
             </button>
@@ -80,19 +80,19 @@ export default function Page() {
             <div className="flex gap-4">
               <a
                 href="https://www.instagram.com/clubdscc/"
-                className="text-dsccGreen underline inline-flex items-center gap-1"
+                className="text-adeBlue underline inline-flex items-center gap-1"
               >
                 <FaInstagram /> Instagram
               </a>
               <a
                 href="https://ma.linkedin.com/company/club-data-science-cloud-computing"
-                className="text-dsccGreen underline inline-flex items-center gap-1"
+                className="text-adeBlue underline inline-flex items-center gap-1"
               >
                 <FaLinkedin /> LinkedIn
               </a>
               <a
                 href="https://github.com/jawad-elkharrati/"
-                className="text-dsccGreen underline inline-flex items-center gap-1"
+                className="text-adeBlue underline inline-flex items-center gap-1"
               >
                 <FaGithub /> GitHub
               </a>

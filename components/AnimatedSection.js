@@ -8,7 +8,7 @@ export default function AnimatedSection({
   stagger = 0,
   ...props
 }) {
-  const distance = 75
+  const distance = 40
   const computeOffset = dir => {
     switch (dir) {
       case 'left':
@@ -66,7 +66,7 @@ export default function AnimatedSection({
       }
       transition={
         {
-          duration: 0.8,
+          duration: 0.5,
           delay
         }
       }

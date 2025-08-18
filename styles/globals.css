@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Sora';
-  src: url('/fonts/Sora-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Helvetica Neue';
+/*   src: url('/fonts/Sora-VariableFont_wght.ttf') format('truetype');*/  
+  src: url('/fonts/helvetica/HelveticaNeueMedium.otf') format('opentype');
   font-style: normal;
   font-display: swap; /* Improves loading performance */
 }
@@ -16,6 +17,15 @@ html {
 
 body {
   @apply font-sans text-darkText bg-white dark:bg-darkText dark:text-white;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 @keyframes slideRight {

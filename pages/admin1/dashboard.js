@@ -214,16 +214,16 @@ export default function Dashboard() {
             value={projectLinkedIn}
             onChange={(e) => setProjectLinkedIn(e.target.value)}
           />
-          <button type="submit" className="bg-dsccGreen text-white px-4 py-2 rounded w-full">Add Project</button>
+          <button type="submit" className="bg-adeBlue text-white px-4 py-2 rounded w-full">Add Project</button>
         </form>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {projects.map((p, i) => (
             <div key={i} className="border rounded p-4">
               <h3 className="font-semibold">{p.name}</h3>
               <p className="text-sm mb-2">{p.desc}</p>
-              <a href={p.link} className="text-dsccGreen underline block mb-2">GitHub</a>
+              <a href={p.link} className="text-adeBlue underline block mb-2">GitHub</a>
               {p.ownerLinkedIn && (
-                <a href={p.ownerLinkedIn} className="text-dsccGreen underline block mb-2">LinkedIn</a>
+                <a href={p.ownerLinkedIn} className="text-adeBlue underline block mb-2">LinkedIn</a>
               )}
               <button onClick={() => removeProject(i)} className="text-red-500 text-sm underline">Remove</button>
             </div>
@@ -256,7 +256,7 @@ export default function Dashboard() {
             onChange={(e) => setEvtLocation(e.target.value)}
             required
           />
-          <button type="submit" className="bg-dsccGreen text-white px-4 py-2 rounded w-full">Add Event</button>
+          <button type="submit" className="bg-adeBlue text-white px-4 py-2 rounded w-full">Add Event</button>
         </form>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {events.map((e, i) => (
@@ -286,12 +286,12 @@ export default function Dashboard() {
             onChange={(e) => setDriveLink(e.target.value)}
             required
           />
-          <button type="submit" className="bg-dsccGreen text-white px-4 py-2 rounded w-full">Add Drive</button>
+          <button type="submit" className="bg-adeBlue text-white px-4 py-2 rounded w-full">Add Drive</button>
         </form>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {drives.map((d, i) => (
             <div key={i} className="border rounded p-4 flex justify-between items-center">
-              <a href={d.link} className="text-dsccGreen underline">{d.title}</a>
+              <a href={d.link} className="text-adeBlue underline">{d.title}</a>
               <button onClick={() => removeDrive(i)} className="text-red-500 text-sm underline">Remove</button>
             </div>
           ))}
@@ -315,12 +315,12 @@ export default function Dashboard() {
             onChange={(e) => setLaureatLinkedIn(e.target.value)}
             required
           />
-          <button type="submit" className="bg-dsccGreen text-white px-4 py-2 rounded w-full">Add Laureat</button>
+          <button type="submit" className="bg-adeBlue text-white px-4 py-2 rounded w-full">Add Laureat</button>
         </form>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {laureats.map((l, i) => (
             <div key={i} className="border rounded p-4 flex justify-between items-center">
-              <a href={l.linkedin} className="text-dsccGreen underline">{l.name}</a>
+              <a href={l.linkedin} className="text-adeBlue underline">{l.name}</a>
               <button onClick={() => removeLaureat(i)} className="text-red-500 text-sm underline">Remove</button>
             </div>
           ))}

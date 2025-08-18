@@ -1,34 +1,22 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { MdOutlineArrowOutward } from "react-icons/md";
 
-export default function ProjectCard({ name, link, desc, ownerName, ownerLinkedIn }) {
+
+export default function ProjectCard({ name, link, desc, ownerName, ownerLinkedIn, src }) {
+  
+
   return (
-    <div className="border rounded-lg p-6 shadow hover:shadow-lg transition flex flex-col justify-between bg-white hover:duration-300">
-      <div>
-        <h3 className="text-xl font-semibold mb-2">{name}</h3>
-        <p className="text-sm mb-6">{desc}</p>
+      <div className="relative border rounded-lg shadow hover:shadow-lg transition flex flex-col justify-between bg-white hover:duration-300">
+        <div className="absolute inset-0 bg-black/40 rounded-lg"/>
+        <img src={src} alt={`${name} image`} className="w-full h-60 object-contain" />
+        <div className="absolute text-white bottom-0 p-4 flex flex-row items-center w-full justify-between">
+          <h3 className="text-xl font-semibold">{name}</h3>
+          <MdOutlineArrowOutward className='text-2xl'/>
+        </div> 
+
+        
+        
       </div>
-      <div className="flex items-center justify-between text-sm mt-auto">
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-dsccGreen hover:text-dsccOrange flex items-center gap-1"
-        >
-          <FaGithub />
-          <span>GitHub</span>
-        </a>
-        {ownerLinkedIn && ownerName && (
-          <a
-            href={ownerLinkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-dsccGreen hover:text-dsccOrange flex items-center gap-1"
-          >
-            <FaLinkedin />
-            <span>{ownerName}</span>
-          </a>
-        )}
-      </div>
-    </div>
+    
   )
 }

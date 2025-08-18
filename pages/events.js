@@ -76,7 +76,7 @@ export default function Page() {
           className="absolute inset-0 bg-cover bg-center opacity-80"
           style={{ backgroundImage: 'url(/2.jpg)' }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-dsccGreen/70 to-dsccOrange/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-adeBlue/70 to-adeRed/70" />
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Nos événements</h1>
           <p className="max-w-2xl mx-auto text-lg md:text-xl">
@@ -103,7 +103,7 @@ export default function Page() {
             {allEvents.map((e, i) => (
               <div key={i} className="p-4 bg-white rounded shadow hover:shadow-lg hover:duration-150">
                 <h3 className="text-xl font-semibold flex items-center gap-2">
-                  <FaRegCalendarAlt className="text-dsccOrange" /> {e.title}
+                  <FaRegCalendarAlt className="text-adeRed" /> {e.title}
                 </h3>
                 <p className="text-gray-600">
                   {e.date} – {e.location}
@@ -124,14 +124,14 @@ export default function Page() {
       </AnimatedSection>
 
       {/* Join call */}
-      <AnimatedSection className="py-20 bg-dsccGreen text-white text-center" direction="up">
+      <AnimatedSection className="py-20 bg-adeBlue text-white text-center" direction="up">
         <h2 className="text-3xl font-bold mb-4">Participez à nos prochains événements&nbsp;!</h2>
         <p className="mb-6 max-w-2xl mx-auto text-lg">
           Rejoignez-nous et vivez l'expérience data avec la communauté.
         </p>
         <Link
           href="/join"
-          className="bg-white text-dsccGreen hover:bg-dsccOrange hover:text-white px-6 py-3 rounded-full inline-flex items-center gap-2 transition"
+          className="bg-white text-adeBlue hover:bg-adeRed hover:text-white px-6 py-3 rounded-2xl inline-flex items-center gap-2 transition"
         >
           <span>Rejoindre le club</span>
           <FaArrowRight />
@@ -144,10 +144,10 @@ export default function Page() {
 function Stat({ icon: Icon, count, label }) {
   return (
     <div className="flex flex-col items-center text-center">
-      <div className="flex items-center justify-center w-16 h-16 mb-4 bg-dsccGreen/10 text-dsccGreen rounded-full">
+      <div className="flex items-center justify-center w-16 h-16 mb-4 bg-adeBlue/10 text-adeBlue rounded-2xl">
         <Icon size={32} />
       </div>
-      <span className="text-4xl font-extrabold text-dsccGreen">
+      <span className="text-4xl font-extrabold text-adeBlue">
         <Counter to={count} duration={1200} />
       </span>
       <p className="mt-2 text-lg">{label}</p>
