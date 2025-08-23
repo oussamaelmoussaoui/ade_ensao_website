@@ -31,9 +31,12 @@ export default function Page() {
       {/* Hero */}
       <section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-white -mt-4">
 
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-80"
-          style={{ backgroundImage: 'url(/1.jpg)' }}
+        <Image
+          src="/wireframe-pic.svg"
+          alt="Background image "
+          fill
+          className="object-cover filter grayscale-0 brightness-75"
+          priority
         />
         <div className="absolute inset-0 bg-gradient-to-r from-adeBlue-700/70 to-adeRed-600/70" />
         
@@ -177,9 +180,7 @@ export default function Page() {
                 <div className="text-center bg-white p-4 rounded-2xl hover:shadow-lg hover:bg-adeRed-100 transition duration-300 ease-in-out">
                   <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
                     <img src={`/team/${idx + 1}.jpg`} alt={m.name} className="object-cover w-full h-full" />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-adeBlue text-white p-2 text-sm transition text-center">
-                      {quotesByRole[m.role]}
-                    </div>
+                    
                   </div>
                   <p className="font-semibold">{m.name}</p>
                   <p className="text-sm text-adeRed-600">{m.role}</p>
@@ -199,10 +200,8 @@ export default function Page() {
               <Link href={`${m.linkedin}`} key={m.name}>
                 <div key={m.name} className="text-center bg-gray-100 p-4 rounded-2xl hover:shadow-lg hover:bg-adeBlue-100 transition duration-300 ease-in-out">
                   <div className="h-32 w-32 mx-auto rounded-full bg-gray-200 mb-2 relative overflow-hidden">
-                    <img src={`/team/${pilotageTeam.length + idx + 1}.jpg`} alt={m.name} className="object-cover w-full h-full" />
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-80 bg-adeBlue text-white p-2 text-sm transition text-center">
-                      {quotesByRole[m.role]}
-                    </div>
+                    <img /* src={`/team/${pilotageTeam.length + idx + 1}.jpg`} */ src="/wireframe-pic.svg" alt={m.name} className="object-cover w-full h-full" />
+                    
                   </div>
                   <p className="font-semibold">{m.name}</p>
                   <p className="text-sm text-adeBlue-600">{m.role}</p>
@@ -400,24 +399,6 @@ function Stat({ icon: Icon, count, label }) {
       <p className="mt-2 text-lg">{label}</p>
     </div>
   )
-}
-
-const quotesByRole = {
-  'Président': 'Diriger pour innover.',
-  'Vice-Présidente': "Toujours à l'écoute.",
-  'Secrétaire': 'Organiser pour avancer.',
-  'Trésorière': 'Gérer pour prospérer.',
-  'Responsable RH': 'Valoriser notre équipe.',
-  'Responsable Design': "L'esthétique avant tout.",
-  'Responsable Maison de Science': 'Cultiver la connaissance.',
-  'Responsable Média': 'Partager notre passion.',
-  'Responsable Montage': 'Donner vie aux images.',
-  'Responsable Logistique': 'Tout est dans les détails.',
-  'Responsable Compétition': 'Toujours prêt pour le défi.',
-  'Responsable Journée': 'Chaque année une empreinte.',
-  'Responsable Sponsoring': 'Trouver nos alliés.',
-  'Responsable Rédaction': 'Écrire pour informer.',
-  'Responsable Formation': 'Apprendre pour grandir.'
 }
 
 const pilotageTeam = [

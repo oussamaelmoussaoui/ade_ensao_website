@@ -2,6 +2,7 @@ import Layout from '../components/Layout'
 import AnimatedSection from '../components/AnimatedSection'
 import { FaPaperPlane, FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export default function Page() {
   const [name, setName] = useState('')
@@ -24,8 +25,14 @@ export default function Page() {
 
   return (
     <Layout title="Contact">
-      <section className="relative w-full h-64 md:h-[400px] overflow-hidden flex items-center justify-center text-white">
-        <div className="absolute inset-0 bg-cover bg-center opacity-80" style={{ backgroundImage: 'url(/2.jpg)' }} />
+      <section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-white">
+        <Image
+          src="/wireframe-pic.svg"
+          alt="Background image "
+          fill
+          className="object-cover filter grayscale-0 brightness-75"
+          priority
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-adeBlue/70 to-adeRed/70" />
         <div className="relative z-10 text-center px-4">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Contact</h1>
@@ -77,26 +84,7 @@ export default function Page() {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-            <div className="flex gap-4">
-              <a
-                href="https://www.instagram.com/clubdscc/"
-                className="text-adeBlue underline inline-flex items-center gap-1"
-              >
-                <FaInstagram /> Instagram
-              </a>
-              <a
-                href="https://ma.linkedin.com/company/club-data-science-cloud-computing"
-                className="text-adeBlue underline inline-flex items-center gap-1"
-              >
-                <FaLinkedin /> LinkedIn
-              </a>
-              <a
-                href="https://github.com/jawad-elkharrati/"
-                className="text-adeBlue underline inline-flex items-center gap-1"
-              >
-                <FaGithub /> GitHub
-              </a>
-            </div>
+            
           </div>
         </div>
       </AnimatedSection>
