@@ -21,7 +21,7 @@ export default function Page() {
   return (
     <Layout title="Ressources">
       {/* Hero */}
-      <section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-white">
+      <section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-white -mt-4">
         <div className="absolute inset-0 bg-cover bg-center opacity-80" style={{ backgroundImage: 'url(/1.jpg)' }} />
         <div className="absolute inset-0 bg-gradient-to-r from-adeBlue-700/70 to-adeRed-600/70" />
         <div className="relative z-10 text-center px-4">

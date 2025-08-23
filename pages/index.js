@@ -39,7 +39,7 @@ export default function Home() {
     <Layout title="Accueil">
       
       {/* Hero */}
-      <section className="relative w-full h-[80vh] overflow-hidden flex items-center text-white justify-center">
+      <section className="relative w-full h-[80vh] overflow-hidden flex items-center text-white justify-center -mt-4">
         
         {/* <AnimatePresence mode="sync">
           <motion.div
@@ -67,7 +67,7 @@ export default function Home() {
 
           <motion.div
             className="relative z-10 text-center md:text-left bg-white/60 backdrop-blur shadow-sm rounded-md m-4 p-10"
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
@@ -111,7 +111,7 @@ export default function Home() {
       </section>
 
       {/* Events */}
-      <AnimatedSection id="events" className="py-20 bg-gray-50" direction="right">
+      <AnimatedSection id="events" className="py-20 bg-gray-50" direction="up">
         <div className="container mx-auto px-4 max-w-7xl h-[60vh] flex flex-col items-center justify-center overflow-hidden">
           <h2 className="text-3xl font-bold text-center mb-8">Envie de vivre des moments forts ?</h2>
           <p className="max-w-lg mx-auto text-center text-lg md:text-lg mb-8 text-gray-950">
@@ -119,7 +119,7 @@ export default function Home() {
           </p>
           <div className="overflow-hidden pb-2">
             <div className="flex flex-nowrap items-center gap-10 w-max sponsor-scroll">
-              {Array.from({ length: 20 }, (_, i) => {
+              {Array.from({ length: 13 }, (_, i) => {
                 const logos = [
                   '/wireframe-pic.svg',
                   '/wireframe-pic.svg',
@@ -159,7 +159,7 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Clubs Preview */}
-      <AnimatedSection id="clubspara" className="py-20 bg-white" direction="left">
+      <AnimatedSection id="clubspara" className="py-20 bg-white" direction="up">
         <div className="container mx-auto px-6 max-w-7xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Tu as une passion ? Il y a un club pour ça.</h2>
           <p className="max-w-lg mx-auto text-center text-lg md:text-lg mb-8 text-gray-950">
@@ -182,7 +182,7 @@ export default function Home() {
       </AnimatedSection>
 
       {/* Qraytna */}
-      <AnimatedSection id="qraytna" className="py-20" direction="right">
+      <AnimatedSection id="qraytna" className="py-20" direction="up">
         <div className="relative container mx-auto px-6 max-w-7xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Ton espace pédagogique, à portée de clic</h2>
           <p className="max-w-xl mx-auto text-center text-lg md:text-lg mb-8 text-gray-950">
@@ -204,10 +204,10 @@ export default function Home() {
       {/* Contact */}
       <AnimatedSection id="contact" className=" bg-white text-black" direction="up" delay={0.2}>
         
-        <div className="container items-center gap-14 grid grid-cols-1 md:grid-cols-2 mx-auto px-6 max-w-7xl lg:grid-cols-2 lg:grid-flow-col py-6">
-          <div>
-            <h2 className="text-3xl font-bold mb-8 text-left">On t’écoute, parle-nous !</h2>
-            <p className="max-w-lg text-left text-lg md:text-lg mb-8 text-gray-950">
+        <div className="container items-center gap-8 md:gap-14 grid grid-cols-1 md:grid-cols-2 mx-auto px-6 max-w-7xl lg:grid-cols-2 lg:grid-flow-col py-6">
+          <div className='text-center md:text-left flex flex-col justify-center w-full'>
+            <h2 className="text-3xl font-bold mb-8 ">On t’écoute, parle-nous !</h2>
+            <p className="max-w-lg text-lg md:text-lg text-gray-950 mx-auto">
               Une question ou un retour ?
               L’ADE est là pour toi, par mail ou via les réseaux sociaux, en toute confiance.
             </p>
@@ -359,7 +359,7 @@ function IconTrust({ src , title}) {
     <div
       className=" bg-white shadow rounded-lg flex relative text-black hover:text-white duration-300 ease-in-out"
     >
-      <Image src={src} alt="logo" width={160} height={80} className="w-full h-80 object-cover" />
+      <Image src={src} alt="logo" width={160} height={80} className="w-full h-60 md:h-80 object-cover" />
       <div className="absolute inset-0 hover:bg-adeBlue-600/60 bg-transparent duration-300 ease-in-out  rounded-lg" />
       <div className="absolute bottom-0 p-4 flex flex-col justify-start">
         <h3 className="text-xl font-semibold bottom-0">{title}</h3>

@@ -7,8 +7,8 @@ import DarkModeToggle from './DarkModeToggle'
 export default function Header(){
   const [open, setOpen] = useState(false)
   return (
-    <header className="sticky top-0 z-50 w-full py-4  backdrop-blur
-          bg-white/70 dark:bg-darkText/70"
+    <header className="sticky top-0 z-50 w-full py-0 md:py-4 backdrop-blur
+          bg-white/70 dark:bg-darkText/70 transition-all duration-300 ease-in-out"
     >
       <div className="container flex items-center justify-between relative max-w-7xl
       mx-auto px-6">
@@ -29,7 +29,7 @@ export default function Header(){
 
         <nav
           className={`${
-            open ? 'flex' : 'hidden'
+            open ? 'flex ' : 'hidden'
           } md:flex flex-col md:flex-row gap-6 md:gap-4 items-center text-sm 
           dark:text-white md:static absolute top-full left-0 w-full md:w-auto 
           bg-white dark:bg-darkText md:bg-transparent md:dark:bg-transparent 

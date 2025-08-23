@@ -56,13 +56,29 @@ export const clubspara = [
     name: 'ENSAO Reporters',
     desc: (
       <>
-      
-        
+        ENSAO Reporters
+        Le micro de vos talents, la caméra de vos
+        idées.
+        Tu veux rendre ta vie au campus plus
+        excitante et pleine de découvertes ?
+        Chez ENSAO Reporters, on croit que chaque
+        idée peut se transformer en projet unique.
+        Nos talents nous ont déjà permis de créer la
+        Rencontre Nationale des Créateurs de
+        Contenu et des projets comme Carrière nta3i.
+        Mais ce n’est pas tout : on participe aussi à
+        des rendez-vous majeurs comme Meet the
+        Lead ou Digitalk.
+        Chaque expérience nous aide à grandir, à
+        apprendre et à briller encore plus.
+        Et toi, si tu veux rejoindre l’aventure, pas
+        besoin d’être un pro : juste la curiosité, la
+        motivation et l’envie d’apprendre suffisent.
       </>
     ),
     insta: '',
     linkedin: '',
-    src: '/wireframe-pic.svg'
+    src: '/images/clubs/logos/parascolaire/logo-reporters-black.png'
   },
 
   //Futur Ingénieurs
@@ -72,7 +88,6 @@ export const clubspara = [
       <>
       
           Vous rêvez d’innover, de collaborer
-
           et de vous dépasser ?
           Le Club Futur Ingénieurs est
           l’espace où vos idées prennent vie.
@@ -104,26 +119,24 @@ export const clubspara = [
     name: 'Club Rotaract',
     desc: (
       <>
-      
-          Le club humanitaire Rotaract ENSA Oujda est
-          un espace d'engagement et de solidarité
-          porté par de jeunes étudiants motivés. Nous
-          menons diverses actions à impact social, telles
-          que des caravanes humanitaires, des Iftars
-          pendant le mois sacré du Ramadan, ainsi que
-          des événements de divertissement comme
-          des soirées caritatives. À travers ces activités,
-          notre objectif est de créer un changement
-          positif dans notre communauté, en alliant
-          entraide, responsabilité sociale et
-          épanouissement personnel au sein du
-          parascolaire.
-        
+        Le club humanitaire Rotaract ENSA Oujda est
+        un espace d'engagement et de solidarité
+        porté par de jeunes étudiants motivés. Nous
+        menons diverses actions à impact social, telles
+        que des caravanes humanitaires, des Iftars
+        pendant le mois sacré du Ramadan, ainsi que
+        des événements de divertissement comme
+        des soirées caritatives. À travers ces activités,
+        notre objectif est de créer un changement
+        positif dans notre communauté, en alliant
+        entraide, responsabilité sociale et
+        épanouissement personnel au sein du
+        parascolaire.
       </>
     ),
     insta: 'https://www.instagram.com/rotaractclubensao?igsh=MWhvZThsd2IwMXhpNA==',
     linkedin: '',
-    src: '/wireframe-pic.svg'
+    src: '/images/clubs/logos/parascolaire/logo-rotaract.png'
   },
 
   //Culturel
@@ -210,7 +223,7 @@ export const clubspara = [
     ),
     insta: 'https://www.instagram.com/enactus_ensao?igsh=MWFhMGcyaHY4c2h2dQ==',
     linkedin: '',
-    src: '/wireframe-pic.svg'
+    src: '/images/clubs/logos/parascolaire/logo-enactus.png'
   },
 
   //ENSART
@@ -240,13 +253,31 @@ export const clubspara = [
     src: '/wireframe-pic.svg'
   },
 
-  //Minds & Machines
+  //Among Us
   {
-    name: 'Club Minds & Machines',
+    name: 'Club Among Us',
     desc: (
       <>
-      
-        
+      Le Club Among Us de l’ENSAO est une entité
+      étudiante engagée dans la promotion du bien-
+      être, de l’intégration et du développement
+      personnel au sein de la communauté
+      estudiantine. Par l’organisation de
+      conférences, d’ateliers thématiques, d’activités
+      culturelles et de campagnes de sensibilisation,
+      le club œuvre à instaurer un climat d’échange,
+      de solidarité et de cohésion entre les
+      étudiants. Ses initiatives, centrées notamment
+      sur la santé mentale et l’équilibre de vie,
+      visent à accompagner les étudiants dans leur
+      parcours académique et personnel, tout en
+      renforçant leur sentiment d’appartenance à
+      l’école. Grâce à une équipe motivée et
+      créative, le Club Among Us s’emploie chaque
+      année à proposer un programme
+      d’événements pertinents et de qualité,
+      contribuant activement à la vie et au
+      rayonnement de l’ENSAO.
       </>
     ),
     insta: '',

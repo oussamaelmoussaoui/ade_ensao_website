@@ -329,7 +329,7 @@ export default function Page() {
       </AnimatedSection> */}
 
       {/* Join call */}
-      <AnimatedSection className="py-20 bg-adeBlue-700 text-white text-center" direction="up">
+      {/* <AnimatedSection className="py-20 bg-adeBlue-700 text-white text-center" direction="up">
         <h2 className="text-3xl font-bold mb-4">Envie de nous rejoindre&nbsp;?</h2>
         <p className="mb-6 max-w-2xl mx-auto text-lg">
           Rejoignez la communauté et participez à l'aventure data science avec
@@ -340,7 +340,7 @@ export default function Page() {
           <span>Rejoindre le club</span>
           <FaArrowRight />
         </Link>
-      </AnimatedSection>
+      </AnimatedSection> */}
     </Layout>
   )
 }

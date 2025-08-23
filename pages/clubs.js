@@ -11,13 +11,13 @@ import { clubspara, clubF } from '../data/clubs'
 
 export default function Page() {
   const stats = [
-    { icon: FaUsers, count: 300, label: 'Membres actifs/an' },
+    { icon: FaUsers, count: 400, label: 'Membres actifs/an' },
     { icon: FaRegCalendarAlt, count: 20, label: 'Années' }
   ]
   return (
     <Layout title="Notre Équipe">
       {/* Hero */}
-      <section className="relative w-full h-[80vh] overflow-hidden flex items-center text-white justify-center">
+      <section className="relative w-full h-[80vh] overflow-hidden flex items-center text-white justify-center -mt-4">
         <Image
           src="/wireframe-pic.svg"
           alt="Background image "
@@ -59,15 +59,15 @@ export default function Page() {
       </section>
 
       {/* Stats */}
-      <AnimatedSection className="py-16 bg-white" direction="up">
-        <div className="mx-auto grid sm:grid-cols-2 gap-8 max-w-5xl px-4">
+      <AnimatedSection className="bg-adeBlue-600 m-6 rounded-xl max-w-7xl mx-auto py-16 " direction="up">
+        <div className="mx-auto grid sm:grid-cols-2 gap-8 px-4">
           {stats.map((s, i) => (
             <Stat key={i} {...s} />
           ))}
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="my-24" direction="up">
+      <AnimatedSection direction="up">
         <div className='container p-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center overflow-hidden'>
           
           <div className='bg-gray-100 p-8 rounded-lg shadow-md w-full h-full'>
@@ -101,21 +101,21 @@ export default function Page() {
       <section className="my-24" >
         <div className='container max-w-7xl mx-auto flex flex-col items-center justify-center overflow-hidden gap-10'>
           <div>
-            <h2 className="text-3xl font-bold text-center mb-8">Enrichissez vos expériences</h2>
+            <h2 className="text-3xl font-bold text-center mb-8 ">Enrichissez vos expériences</h2>
             <p className="max-w-lg mx-auto text-center text-lg md:text-lg mb-8 text-gray-950">
               Vous pouvez choisir l'un des {clubspara.length} clubs parascolaires existant dans notre école.
             </p>
           </div>
 
           <div className='w-full'>
-            <h3 className="text-2xl font-bold text-left w-full">Les clubs Parascolaires: </h3>
+            <h3 className="text-2xl font-bold text-left w-full mx-6 text-adeBlue-700">Les clubs Parascolaires: </h3>
             <div className="flex flex-col items-center justify-center">
               <ClubModal clubs={clubspara} className="w-full"/>
             </div>
           </div>
           
           <div>
-            <h3 className="text-2xl font-bold text-left w-full">Les clubs des Filières: </h3>
+            <h3 className="text-2xl font-bold text-left w-full mx-6 text-adeBlue-700">Les clubs des Filières: </h3>
             <div className="flex flex-col items-center justify-center">
               <ClubModal clubs={clubF} className="w-full"/>
             </div>
@@ -124,26 +124,17 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Join call */}
-      <AnimatedSection className="py-20 bg-adeBlue text-white text-center" direction="up">
-        <h2 className="text-3xl font-bold mb-4">Envie de rejoindre l'équipe&nbsp;?</h2>
-        <p className="mb-6 max-w-2xl mx-auto text-lg">Nous recrutons chaque année de nouveaux membres motivés.</p>
-        <Link href="/join" className="bg-white text-adeBlue hover:bg-adeRed hover:text-white px-6 py-3 rounded-2xl inline-flex items-center gap-2 transition">
-          <span>Postuler</span>
-          <FaArrowRight />
-        </Link>
-      </AnimatedSection>
     </Layout>
   )
 }
 
 function Stat({ icon: Icon, count, label }) {
   return (
-    <div className="flex flex-col items-center text-center">
+    <div className="flex flex-col items-center text-center text-white w-full">
       <div className="flex items-center justify-center w-16 h-16 mb-4 bg-adeBlue/10 text-adeBlue rounded-2xl">
         <Icon size={32} />
       </div>
-      <span className="text-4xl font-extrabold text-adeBlue-700">
+      <span className="text-4xl font-extrabold ">
         <Counter to={count} duration={1200} />
       </span>
       <p className="mt-2 text-lg">{label}</p>
