@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export default function ClubsDrawer({clubs}) {
+export default function ClubsDrawer({ clubs }) {
   const [selectedClub, setSelectedClub] = useState(null);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    // Runs only in the browser
+    const checkScreenSize = () => setIsLargeScreen(window.innerWidth >= 640);
+
+    checkScreenSize(); // run once on mount
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
 
   const openDrawer = (club) => setSelectedClub(club);
   const closeDrawer = () => setSelectedClub(null);
@@ -16,16 +27,13 @@ export default function ClubsDrawer({clubs}) {
             className="relative border rounded-lg shadow hover:shadow-lg transition flex flex-col justify-between bg-white cursor-pointer filter grayscale-0 hover:grayscale duration-300"
             onClick={() => openDrawer(club)}
           >
-          {/* <div className="absolute inset-0 hover:bg-adeBlue-600/60 bg-transparent duration-300 ease-in-out  rounded-lg" /> */}
-
             <img
               src={club.src}
               alt={club.name}
-              className="w-full px-4 h-60 object-contain "
+              className="w-full px-4 h-60 object-contain"
             />
             <div className="rounded-lg absolute bottom-0 p-4 bg-gradient-to-t from-black/50 to-transparent w-full">
               <h3 className="text-xl font-semibold text-white">{club.name}</h3>
-{/*               <p className="text-sm text-gray-200">{club.desc}</p> */}
             </div>
           </div>
         ))}
@@ -46,12 +54,12 @@ export default function ClubsDrawer({clubs}) {
             ? "translate-x-0 bottom-0"
             : "translate-x-full sm:translate-y-full"
           }
-          sm:bottom-auto sm:top-0 sm:right-0  sm:w-96
+          sm:bottom-auto sm:top-0 sm:right-0 sm:w-96
           w-full h-[80%] sm:h-full`}
         style={{
           transform: selectedClub
             ? "translateX(0)"
-            : window.innerWidth >= 640
+            : isLargeScreen
             ? "translateX(100%)"
             : "translateY(100%)"
         }}
@@ -71,7 +79,7 @@ export default function ClubsDrawer({clubs}) {
                 href={selectedClub.insta}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-adeBlue-700 "
+                className="text-adeBlue-700"
               >
                 {selectedClub.name}
               </a>
