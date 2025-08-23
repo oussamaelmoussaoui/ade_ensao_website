@@ -25,7 +25,7 @@ export default function Page() {
 
   return (
     <Layout title="Contact">
-      <section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-white">
+      <section className="relative w-full h-screen md:h-[80vh] overflow-hidden flex items-center justify-center text-white">
         <Image
           src="/wireframe-pic.svg"
           alt="Background image "

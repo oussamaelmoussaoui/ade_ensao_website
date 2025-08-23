@@ -25,7 +25,7 @@ import { clubspara } from '../data/clubs'
 
 export default function Home() {
   // Slides displayed in the hero section
-  const slides = ['/1.jpg', '/2.jpg'];
+  const slides = ['/wireframe-pic.svg', '/2.jpg'];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -39,7 +39,7 @@ export default function Home() {
     <Layout title="Accueil">
       
       {/* Hero */}
-      <section className="relative w-full h-[80vh] overflow-hidden flex items-center text-white justify-center -mt-4">
+      <section className="relative w-full h-screen md:h-[80vh] overflow-hidden flex items-center text-white justify-center -mt-4">
         
         {/* <AnimatePresence mode="sync">
           <motion.div
@@ -99,7 +99,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.5 }}
           >
             <Image
-              src="/1.jpg"
+              src="/wireframe-pic.svg"
               alt="Background image"
               fill
               className="object-cover"
@@ -193,7 +193,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-10">
-            <Link href="/ressources" className="text-adeBlue-600 bg-white py-2 px-4 rounded-full hover:text-adeRed inline-flex items-center gap-1 hover:gap-3 duration-300 ease-in-out">
+            <Link href="/resources" className="text-adeBlue-600 bg-white py-2 px-4 rounded-full hover:text-adeRed inline-flex items-center gap-1 hover:gap-3 duration-300 ease-in-out">
               <span>Voir toutes les ressources</span>
               <FaArrowRight />
             </Link>

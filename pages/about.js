@@ -29,7 +29,7 @@ export default function Page() {
   return (
     <Layout title="À propos">
       {/* Hero */}
-      <section className="relative w-full h-[80vh] overflow-hidden flex items-center justify-center text-white -mt-4">
+      <section className="relative w-full h-screen md:h-[80vh] overflow-hidden flex items-center justify-center text-white -mt-4">
 
         <Image
           src="/wireframe-pic.svg"

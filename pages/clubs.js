@@ -17,7 +17,7 @@ export default function Page() {
   return (
     <Layout title="Notre Équipe">
       {/* Hero */}
-      <section className="relative w-full h-[80vh] overflow-hidden flex items-center text-white justify-center -mt-4">
+      <section className="relative w-full h-screen md:h-[80vh] overflow-hidden flex items-center text-white justify-center -mt-4">
         <Image
           src="/wireframe-pic.svg"
           alt="Background image "
