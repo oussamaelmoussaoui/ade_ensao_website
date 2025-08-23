@@ -1,4 +1,4 @@
-import Layout from '../components/Layout'
+/* import Layout from '../components/Layout'
 import AngledSection from '../components/AngledSection'
 
 export default function AngledScroll(){
@@ -18,3 +18,4 @@ export default function AngledScroll(){
     </Layout>
   )
 }
+ */

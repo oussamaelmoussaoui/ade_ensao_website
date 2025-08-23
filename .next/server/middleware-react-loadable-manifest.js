@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"pages\\\\events.js -> firebase/firestore\":{\"id\":\"pages\\\\events.js -> firebase/firestore\",\"files\":[]}}"

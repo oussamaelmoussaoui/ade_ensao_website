@@ -193,7 +193,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-10">
-            <Link href="/events" className="text-adeBlue-600 bg-white py-2 px-4 rounded-full hover:text-adeRed inline-flex items-center gap-1 hover:gap-3 duration-300 ease-in-out">
+            <Link href="/ressources" className="text-adeBlue-600 bg-white py-2 px-4 rounded-full hover:text-adeRed inline-flex items-center gap-1 hover:gap-3 duration-300 ease-in-out">
               <span>Voir toutes les ressources</span>
               <FaArrowRight />
             </Link>
