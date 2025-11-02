@@ -19,6 +19,10 @@ body {
   @apply font-sans text-darkText bg-white dark:bg-darkText dark:text-white;
 }
 
+.relative:hover #info {
+  transform: translateY(0);
+}
+
 .no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, and Opera */
 }

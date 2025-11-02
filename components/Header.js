@@ -7,15 +7,15 @@ import DarkModeToggle from './DarkModeToggle'
 export default function Header(){
   const [open, setOpen] = useState(false)
   return (
-    <header className="sticky top-0 z-50 w-full py-0 md:py-4 backdrop-blur
-          bg-white/70 dark:bg-darkText/70 transition-all duration-300 ease-in-out"
+    <header className="sticky top-0 z-50 w-full py-0 
+    md:py-4 backdrop-blur bg-white/70 transition-all duration-300 ease-in-out"
     >
       <div className="container flex items-center justify-between relative max-w-7xl
       mx-auto px-6">
 
         <Link href="/">
           <span className="flex items-center gap-2 cursor-pointer">
-            <Image src="/ade-logo.png" alt="ADE logo" width={65} height={65} className="bg-transparent" />
+            <Image src="/logoblack.png" alt="ADE logo" width={65} height={65} className="bg-transparent" />
           </span>
         </Link>
 
@@ -31,8 +31,8 @@ export default function Header(){
           className={`${
             open ? 'flex ' : 'hidden'
           } md:flex flex-col md:flex-row gap-6 md:gap-4 items-center text-sm 
-          dark:text-white md:static absolute top-full left-0 w-full md:w-auto 
-          bg-white dark:bg-darkText md:bg-transparent md:dark:bg-transparent 
+          md:static absolute top-full left-0 w-full md:w-auto 
+          bg-white md:bg-transparent 
           shadow md:shadow-none p-6 md:p-0`}
         >
           <Link href="/about" className="hover:text-adeBlue-600 transition whitespace-nowrap text-base">ADE</Link>

@@ -44,7 +44,7 @@ export default function Page() {
 
           <motion.div
             className="relative z-10 text-center md:text-left bg-white/60 backdrop-blur shadow-sm rounded-md m-4 p-10"
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
@@ -125,7 +125,7 @@ export default function Page() {
 
         <div className='max-w-7xl mx-auto relative flex flex-col md:flex-row gap-10 items-start justify-between px-6 md:p-0'>
           <div className='block md:sticky top-32'>
-            <Image src="/wireframe-pic.svg" alt="mission" width={600} height={400} className="rounded-lg shadow-xl" />
+            <Image src="/images/image-5.jpg" alt="mission" width={600} height={400} className="rounded-lg shadow-xl" />
           </div>
 
           <div className='max-w-xl flex flex-col gap-6'>

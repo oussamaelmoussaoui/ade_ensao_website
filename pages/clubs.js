@@ -11,11 +11,12 @@ import { clubspara, clubF } from '../data/clubs'
 
 export default function Page() {
   const stats = [
-    { icon: FaUsers, count: 400, label: 'Membres actifs/an' },
-    { icon: FaRegCalendarAlt, count: 20, label: 'Années' }
+    { icon: FaUsers, count: 200, label: 'Membres actifs/an' },
+    { icon: FaArrowRight, count: 5, label: 'Evenements/an' },
+    { icon: FaRegCalendarAlt, count: 15, label: 'Années' },
   ]
   return (
-    <Layout title="Notre Équipe">
+    <Layout title="Notre Équipe" className="overflow-x-hidden">
       {/* Hero */}
       <section className="relative w-full h-screen md:h-[80vh] overflow-hidden flex items-center text-white justify-center -mt-4">
         <Image
@@ -31,7 +32,7 @@ export default function Page() {
 
           <motion.div
             className="relative z-10 text-center md:text-left bg-white/60 backdrop-blur shadow-sm rounded-md m-4 p-10"
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
@@ -59,8 +60,8 @@ export default function Page() {
       </section>
 
       {/* Stats */}
-      <AnimatedSection className="bg-adeBlue-600 m-6 rounded-xl max-w-7xl mx-auto py-16 " direction="up">
-        <div className="mx-auto grid sm:grid-cols-2 gap-8 px-4">
+      <AnimatedSection className="bg-white m-6 rounded-xl max-w-7xl mx-auto py-16">
+        <div className="mx-auto grid sm:grid-cols-3 gap-8 px-4 max-w-2xl">
           {stats.map((s, i) => (
             <Stat key={i} {...s} />
           ))}
@@ -70,10 +71,10 @@ export default function Page() {
       <AnimatedSection direction="up">
         <div className='container p-6 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-center overflow-hidden'>
           
-          <div className='bg-gray-100 p-8 rounded-lg shadow-md w-full h-full'>
-
-            <h2 className="text-3xl font-bold text-center mb-8"> L’impact du parascolaire </h2>
-            <p className="max-w-lg mx-auto text-center text-lg md:text-lg mb-8 text-gray-950">
+          <div className='relative bg-adeBlue-200/60 p-8 rounded-lg shadow-md w-full h-full text-white'>
+            <Image src="/images/image-1.jpg" alt="title" fill className="rounded-lg w-full h-48 object-cover filter brightness-75 -z-10" />
+            <h2 className="text-3xl font-bold text-center mb-8 "> L’impact du parascolaire </h2>
+            <p className="max-w-lg mx-auto text-center text-lg md:text-lg mb-8 ">
               Les activités parascolaires jouent un rôle essentiel dans le parcours d’un élève ingénieur.
               Au-delà des apprentissages académiques, elles permettent de développer des compétences transversales telles que le leadership, la communication, la gestion de projet, le travail en équipe, ou encore la prise d’initiative.
               <br/><br/>
@@ -82,7 +83,7 @@ export default function Page() {
 
           </div>
 
-          <div className='bg-gray-100 p-8 rounded-lg shadow-md w-full h-full'>
+          <div className='bg-adeBlue-100/60 p-8 rounded-lg shadow-md w-full h-full'>
             <h2 className="text-3xl font-bold text-center mb-8"> Nos clubs</h2>
             <p className="max-w-lg mx-auto text-center text-lg md:text-lg mb-8 text-gray-950">
               L’ENSAO offre un espace dynamique où chaque club est une porte ouverte vers l’engagement et la créativité.
@@ -98,7 +99,7 @@ export default function Page() {
         
       </AnimatedSection>
 
-      <section className="my-24" >
+      <AnimatedSection className="my-24 overflow-x-hidden" >
         <div className='container max-w-7xl mx-auto flex flex-col items-center justify-center overflow-hidden gap-10'>
           <div>
             <h2 className="text-3xl font-bold text-center mb-8 ">Enrichissez vos expériences</h2>
@@ -122,7 +123,7 @@ export default function Page() {
           </div>
           
         </div>
-      </section>
+      </AnimatedSection>
 
     </Layout>
   )
@@ -130,11 +131,11 @@ export default function Page() {
 
 function Stat({ icon: Icon, count, label }) {
   return (
-    <div className="flex flex-col items-center text-center text-white w-full">
-      <div className="flex items-center justify-center w-16 h-16 mb-4 bg-adeBlue/10 text-adeBlue rounded-2xl">
-        <Icon size={32} />
-      </div>
-      <span className="text-4xl font-extrabold ">
+    <div className="flex flex-col items-center text-center w-full">
+      {/* <div className="flex items-center justify-center w-12 h-12 mb-2">
+        <Icon size={28} />
+      </div> */}
+      <span className="text-4xl font-extrabold text-adeBlue-700">
         <Counter to={count} duration={1200} />
       </span>
       <p className="mt-2 text-lg">{label}</p>

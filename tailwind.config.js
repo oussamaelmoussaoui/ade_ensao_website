@@ -1,16 +1,16 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import('tailwindcss').Config} */ 
 module.exports = {
   darkMode: 'class',
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"
+    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
         darkText: "#181818",
         lightGray: "#F8F8F8",
-
         adeBlue: {
           '50': '#e8f1ff',
           '100': '#d5e4ff',
@@ -24,7 +24,6 @@ module.exports = {
           '900': '#10169f',
           '950': '#0a0b5c',
         },
-
         adeRed: {
           '50': '#fff0f0',
           '100': '#ffdddd',
@@ -38,15 +37,10 @@ module.exports = {
           '900': '#920a0a',
           '950': '#500000',
         },
-
-
       },
-      
-
-      fontFamily:{
-        sans:['Sora', 'sans-serif'],
-        sans:['Helvetica Neue', 'sans-serif']
-      }
+      fontFamily: {
+        sans: ['Helvetica Neue', 'sans-serif']
+      },
     },
   },
   plugins: [],

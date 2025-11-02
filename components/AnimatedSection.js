@@ -3,53 +3,22 @@ import { motion } from 'framer-motion'
 export default function AnimatedSection({
   children,
   className,
-  direction = 'up',
   delay = 0,
-  stagger = 0,
   ...props
 }) {
-  const distance = 40
-  const computeOffset = dir => {
-    switch (dir) {
-      case 'left':
-        return {
-          x: distance,
-          y: 0
-        }
-      case 'right':
-        return {
-          x: -distance,
-          y: 0
-        }
-      case 'down':
-        return {
-          x: 0,
-          y: -distance
-        }
-      default:
-        return {
-          x: 0,
-          y: distance
-        }
-    }
-  }
-
   const variants = {
     hidden: { 
-      opacity: 0, 
-      scale: 0.9, 
-      ...computeOffset(direction) 
+      opacity: 0,
+      y: 40 // start slightly below
     },
-    hidden: { opacity: 0, scale: 0.9, ...computeOffset(direction) },
     visible: {
       opacity: 1,
-      scale: 1,
-      x: 0,
-      y: 0,
+      y: 0, // move to natural position
       transition: { 
-        staggerChildren: stagger, 
-        delayChildren: delay 
-      },
+        duration: 0.6,
+        ease: [0.25, 0.1, 0.25, 1], // smooth cubic-bezier
+        delay
+      }
     }
   }
 
@@ -58,18 +27,7 @@ export default function AnimatedSection({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={
-        {
-          once: true,
-          amount: 0.2
-        }
-      }
-      transition={
-        {
-          duration: 0.5,
-          delay
-        }
-      }
+      viewport={{ once: true, amount: 0.2 }}
       variants={variants}
       {...props}
     >

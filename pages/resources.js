@@ -1,107 +1,89 @@
 import Layout from '../components/Layout'
 import AnimatedSection from '../components/AnimatedSection'
 import Link from 'next/link'
-import { FaArrowRight, FaLinkedin } from 'react-icons/fa'
-import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { FaRegCalendarAlt, FaUserPlus } from 'react-icons/fa'
 
 export default function Page() {
-  const [drives, setDrives] = useState([])
-  const [laureats, setLaureats] = useState([])
 
-  useEffect(() => {
-    fetch('/api/drives')
-      .then((res) => res.json())
-      .then((data) => setDrives(data))
-      .catch(() => {})
-    fetch('/api/laureats')
-      .then((res) => res.json())
-      .then((data) => setLaureats(data))
-      .catch(() => {})
-  }, [])
   return (
     <Layout title="Ressources">
       {/* Hero */}
       <section className="relative w-full h-screen md:h-[80vh] overflow-hidden flex items-center justify-center text-white -mt-4">
-        <div className="absolute inset-0 bg-cover bg-center opacity-80" style={{ backgroundImage: 'url(/wireframe-pic.svg)' }} />
+
+        <div className="absolute inset-0 bg-cover bg-center opacity-80" style={{ backgroundImage: 'url(/images/image-3.jpg)' }} />
         <div className="absolute inset-0 bg-gradient-to-r from-adeBlue-700/70 to-adeRed-600/70" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4">Ressources</h1>
-          <p className="max-w-2xl mx-auto text-lg md:text-xl">Accédez directement à nos documents partagés sur Google Drive.</p>
+        <div className='max-w-7xl w-full flex justify-center md:grid md:grid-cols-2 items-center md:justify-between relative'>
+
+          <motion.div
+            className="relative z-10 text-center md:text-left bg-adeBlue-100/60 backdrop-blur shadow-sm rounded-md m-4 p-10"
+            initial={{ opacity: 0}}
+            animate={{ opacity: 1}}
+            transition={{ duration: 1.5 }}
+          >
+            <h1 className="text-4xl text-black md:text-5xl mb-6">
+              L'ADE : L’énergie qui fait vivre l’ENSAO
+            </h1>
+            <p className="max-w-lg text-lg md:text-lg mb-8 text-gray-950">
+              L’ADE, c’est plus qu’une association.
+              C’est un moteur, un lien, une voix.
+              Elle dynamise la vie étudiante à l’ENSAO et soutient le quotidien des élèves ingénieurs.
+            </p>
+
+            <div className="flex gap-4 justify-center md:justify-start flex-wrap">
+              <Link href="/events" className="bg-white hover:bg-black hover:text-white text-black px-6 py-3 rounded-full transition inline-flex items-center gap-2 duration-300 ease-in-out">
+                <span>Votre ADE</span>
+                <FaRegCalendarAlt />
+              </Link>
+              <Link href="/join" className="bg-adeBlue-600 text-white hover:bg-black px-6 py-3 rounded-full transition inline-flex items-center gap-2 duration-300 ease-in-out ">
+                <span>Qraytna</span>
+                <FaUserPlus />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Resources */}
       <AnimatedSection className="py-20 bg-white" direction="left">
         <div className="container mx-auto px-4 max-w-5xl">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-row-2 gap-12 items-center">
 
-            <div className="bg-adeBlue/5 p-8 rounded-lg left md:text-center h-full w-full">
-              <h2 className="text-3xl font-bold mb-4 text-left md:text-center">Outils recommandés</h2>
-              <ul className="pl-5 space-y-1 max-w-md mx-auto md:mx-0">
-                <li>
-                  <a href="https://www.python.org/downloads/" className="text-adeBlue underline inline-flex items-center gap-2">
-                    Python
-                    <FaArrowRight/>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://code.visualstudio.com/" className="text-adeBlue underline inline-flex items-center gap-2">
-                    Visual Studio Code
-                    <FaArrowRight/>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://jupyter.org/install" className="text-adeBlue underline inline-flex items-center gap-2">
-                    Jupyter Notebook
-                    <FaArrowRight/>
-                  </a>
-                </li>
-              </ul>
+            <div className=" p-8 rounded-lg left md:text-center h-full w-full">
+              <h2 className="text-3xl font-bold mb-4 text-left md:text-center">STPI 1</h2>
+              <div className='grid md:grid-cols-2 gap-8 items-center bg-gray-100 p-8 rounded-lg'>
+                <a href='https://drive.google.com/drive/folders/16_lGpChjkiBo5lMfTv_HX3oCK0rwgz4z'>
+                  <div className="flex h-[200px] flex-col items-center bg-white hover:bg-adeBlue-100 p-4 rounded-lg w-full justify-center ease-in-out duration-300 shadow-md hover:shadow-lg ">
+                    <h3 className="text-[20pt] font-semibold mb-2">Semestre 1</h3>
+                  </div>
+                </a>
+                <a href='https://drive.google.com/drive/folders/1sBa_t-FZEa6Gto0mI2rF71jfEGLubFC5'>
+                  <div className="flex h-[200px] flex-col items-center bg-white hover:bg-adeBlue-100 p-4 rounded-lg w-full justify-center ease-in-out duration-300 shadow-md hover:shadow-lg ">
+                    <h3 className="text-[20pt] font-semibold mb-2">Semestre 2</h3>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            <div className="bg-adeBlue/5 p-8 rounded-lg left md:text-center">
-              <h2 className="text-3xl font-bold mb-4 left md:text-center">Accès aux Drives du Club</h2>
-              <p className="mb-6">Retrouvez toutes nos ressources partagées sur Google Drive.</p>
-              <ul className="space-y-2">
-                {drives.map((d, i) => (
-                  <li key={i}>
-                    <a href={d.link} className="text-adeBlue underline inline-flex items-center gap-2">
-                      <span>{d.title}</span>
-                      <FaArrowRight />
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <div className=" p-8 rounded-lg left md:text-center h-full w-full">
+              <h2 className="text-3xl font-bold mb-4 text-left md:text-center">STPI 2</h2>
+              <div className='grid md:grid-cols-2 gap-8 items-center bg-gray-100 p-8 rounded-lg'>
+                <a href='https://drive.google.com/drive/folders/16_lGpChjkiBo5lMfTv_HX3oCK0rwgz4z'>
+                  <div className="flex h-[200px] flex-col items-center bg-white hover:bg-adeBlue-100 p-4 rounded-lg w-full justify-center ease-in-out duration-300 shadow-md hover:shadow-lg ">
+                    <h3 className="text-[20pt] font-semibold mb-2">Semestre 1</h3>
+                  </div>
+                </a>
+                <a href='https://drive.google.com/drive/folders/1sBa_t-FZEa6Gto0mI2rF71jfEGLubFC5'>
+                  <div className="flex h-[200px] flex-col items-center bg-white hover:bg-adeBlue-100 p-4 rounded-lg w-full justify-center ease-in-out duration-300 shadow-md hover:shadow-lg ">
+                    <h3 className="text-[20pt] font-semibold mb-2">Semestre 2</h3>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </AnimatedSection>
 
-      {/* Call */}
-      <AnimatedSection className="py-20 bg-adeBlue text-white text-center" direction="up">
-        <h2 className="text-3xl font-bold mb-4">Vous avez une ressource à partager&nbsp;?</h2>
-        <p className="mb-6 max-w-2xl mx-auto text-lg">Contribuez à l'enrichissement de notre bibliothèque.</p>
-        <Link href="/contact" className="bg-white text-adeBlue hover:bg-adeRed hover:text-white px-6 py-3 rounded-2xl inline-flex items-center gap-2 transition">
-          <span>Nous contacter</span>
-          <FaArrowRight />
-        </Link>
-      </AnimatedSection>
     </Layout>
   )
   }
-
-function LaureatCard({ name, linkedin }) {
-  return (
-    <div className="border rounded-lg p-6 shadow hover:shadow-lg transition flex flex-col items-center bg-white text-center">
-      <p className="font-semibold mb-4">{name}</p>
-      <a
-        href={linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-adeBlue hover:text-adeRed text-3xl mt-auto"
-      >
-        <FaLinkedin />
-      </a>
-    </div>
-  )
-}

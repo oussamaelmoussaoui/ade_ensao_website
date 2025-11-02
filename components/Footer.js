@@ -6,7 +6,7 @@ export default function Footer(){
       <div className="container h-full items-top gap-8 md:gap-14 grid grid-cols-1 md:grid-cols-2 mx-auto px-6 max-w-7xl lg:grid-cols-2 lg:grid-flow-col py-6 text-sm text-gray-600">
         <div className='flex flex-row md:flex-col items-center md:items-start justify-between w-full'>
           <span className="flex items-center gap-2 cursor-pointer">
-            <Image src="/ade-logo.png" alt="ADE logo" width={65} height={65} className="bg-transparent" />
+            <Image src="/logoblack.png" alt="ADE logo" width={65} height={65} className="bg-transparent" />
           </span>
           <p>© {new Date().getFullYear()} ADE ENSAO</p>
         </div>

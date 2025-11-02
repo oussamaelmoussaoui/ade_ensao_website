@@ -17,6 +17,24 @@ export default function ClubsDrawer({ clubs }) {
   const openDrawer = (club) => setSelectedClub(club);
   const closeDrawer = () => setSelectedClub(null);
 
+  useEffect(() => {
+    if (selectedClub) {
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = "hidden";
+      document.body.style.paddingRight = `${scrollBarWidth}px`; // prevent jump
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "0px";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+      document.body.style.paddingRight = "0px";
+    };
+  }, [selectedClub]);
+
+
+
   return (
     <div className="py-6">
       {/* Grid */}
